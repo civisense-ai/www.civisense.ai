@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 export default function LandingPage() {
   const [email, setEmail] = useState("");
   const [formStatus, setFormStatus] = useState<"idle" | "success" | "error">("idle");
+  const [menuOpen, setMenuOpen] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -48,6 +49,14 @@ export default function LandingPage() {
       anchors.forEach((a) => a.removeEventListener("click", handleClick));
     };
   }, []);
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [menuOpen]);
+
+  const closeMenu = () => setMenuOpen(false);
 
   const handleFormSubmit = async () => {
     const val = email.trim();
@@ -104,12 +113,37 @@ export default function LandingPage() {
             <li><a href="#build" style={{ color: "#00D4A8" }}>Build with us</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
+          {/* Desktop CTAs */}
           <div className="nav-cta">
             <a href="#contact" className="btn btn-ghost">Request demo</a>
             <a href="#contact" className="btn btn-primary">Get early access ↗</a>
           </div>
+          {/* Mobile hamburger */}
+          <button
+            className={`nav-hamburger${menuOpen ? " open" : ""}`}
+            onClick={() => setMenuOpen((o) => !o)}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+          >
+            <span /><span /><span />
+          </button>
         </div>
       </nav>
+
+      {/* ══ MOBILE MENU ══ */}
+      <div className={`mobile-menu${menuOpen ? " open" : ""}`} aria-hidden={!menuOpen}>
+        <ul className="mobile-menu-links">
+          <li><a href="#solution" onClick={closeMenu}>Platform</a></li>
+          <li><a href="#how" onClick={closeMenu}>How it works</a></li>
+          <li><a href="#market" onClick={closeMenu}>Market</a></li>
+          <li><a href="#team" onClick={closeMenu}>Team</a></li>
+          <li><a href="#build" onClick={closeMenu} className="highlight">Build with us</a></li>
+          <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
+        </ul>
+        <div className="mobile-menu-cta">
+          <a href="#contact" className="btn btn-primary" onClick={closeMenu}>Get early access ↗</a>
+          <a href="#contact" className="btn btn-ghost" onClick={closeMenu}>Request demo</a>
+        </div>
+      </div>
 
       {/* ══ HERO ══ */}
       <section className="hero" id="hero">
