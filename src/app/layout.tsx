@@ -41,7 +41,6 @@ export const metadata: Metadata = {
       "India's first AI-native governance intelligence platform. AI-powered grievance resolution and real-time analytics for local government bodies.",
     url: "https://civisense.ai",
     siteName: "civisense.ai",
-    images: [{ url: "/civisense-social-icon.png", width: 1200, height: 630, alt: "civisense.ai" }],
     locale: "en_IN",
     type: "website",
   },
@@ -49,7 +48,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "civisense.ai — Making Sense of Citizen Governance",
     description: "India's first AI-native governance intelligence platform.",
-    images: ["/civisense-social-icon.png"],
   },
 };
 
