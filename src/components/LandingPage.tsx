@@ -116,7 +116,7 @@ export default function LandingPage() {
           {/* Desktop CTAs */}
           <div className="nav-cta">
             <a href="#contact" className="btn btn-ghost">Request demo</a>
-            <a href="#contact" className="btn btn-primary">Get early access ↗</a>
+            <a href="#contact" className="btn btn-primary">Get early access →</a>
           </div>
           {/* Mobile hamburger */}
           <button
@@ -140,7 +140,7 @@ export default function LandingPage() {
           <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
         </ul>
         <div className="mobile-menu-cta">
-          <a href="#contact" className="btn btn-primary" onClick={closeMenu}>Get early access ↗</a>
+          <a href="#contact" className="btn btn-primary" onClick={closeMenu}>Get early access →</a>
           <a href="#contact" className="btn btn-ghost" onClick={closeMenu}>Request demo</a>
         </div>
       </div>
@@ -167,7 +167,7 @@ export default function LandingPage() {
               India&apos;s first AI-native governance intelligence platform. Transform citizen grievances into actionable insights — and reactive administration into proactive governance.
             </p>
             <div className="hero-actions">
-              <a href="#contact" className="btn btn-primary btn-lg">Request early access ↗</a>
+              <a href="#contact" className="btn btn-primary btn-lg">Request early access →</a>
               <a href="#solution" className="btn btn-ghost btn-lg">See the platform</a>
               <span className="live-pill">
                 <span className="live-dot" />
@@ -592,7 +592,7 @@ export default function LandingPage() {
           </div>
 
           <div className="build-bottom reveal">
-            <a href="mailto:ajay@civisense.ai" className="btn btn-primary btn-lg">Get in touch ↗</a>
+            <a href="mailto:ajay@civisense.ai" className="btn btn-primary btn-lg">Get in touch →</a>
             <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem", textAlign: "center" }}>
               <span className="build-bottom-tag">ajay@civisense.ai</span>
               <span className="build-bottom-tag">Response within 48 hours, always</span>
@@ -624,7 +624,7 @@ export default function LandingPage() {
                   onKeyDown={(e) => e.key === "Enter" && handleFormSubmit()}
                 />
                 <button className="btn btn-primary" onClick={handleFormSubmit}>
-                  Request access ↗
+                  Request access →
                 </button>
               </div>
             )}
