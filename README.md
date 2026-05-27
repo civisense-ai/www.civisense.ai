@@ -1,43 +1,36 @@
-# www.civisense.ai
-
-The marketing website for **civisense.ai** — an AI-powered governance intelligence platform delivering real-time grievance resolution, citizen sentiment analysis, and decision support for local government bodies across India.
-
-This repository is a [Next.js](https://nextjs.org/) (App Router) project converted from a single-file HTML prototype.
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
-Install dependencies and run the dev server:
+First, run the development server:
 
 ```bash
-npm install
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Available Scripts
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-- `npm run dev` — start the local development server with hot reload
-- `npm run build` — build the production bundle
-- `npm run start` — run the production build (after `npm run build`)
-- `npm run lint` — run Next.js / ESLint checks
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Project Structure
+## Learn More
 
-```
-app/
-  layout.jsx     # Root layout — fonts, metadata, <html>/<body>
-  page.jsx       # Home route ("/") — server entry that renders <HomePage />
-  HomePage.jsx   # Client component — renders the marketing page markup and runs interactive scripts
-  globals.css    # Global styles (extracted from the original HTML)
-public/
-  legacy.html    # Archival copy of the original single-file HTML
-```
+To learn more about Next.js, take a look at the following resources:
 
-## Deployment
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-Any platform that supports Next.js works (Vercel, Netlify, AWS, self-hosted Node). The simplest option is to push to Vercel and connect this GitHub repo.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## License
+## Deploy on Vercel
 
-Proprietary — © civisense.ai
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

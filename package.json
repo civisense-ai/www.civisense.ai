@@ -1,24 +1,29 @@
 {
-  "name": "www.civisense.ai",
+  "name": "civisense-ai",
   "version": "0.1.0",
   "private": true,
-  "description": "civisense.ai — AI-powered governance intelligence platform website (Next.js).",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "14.2.5",
-    "react": "18.3.1",
-    "react-dom": "18.3.1"
-  },
-  "devDependencies": {
-    "eslint": "8.57.0",
-    "eslint-config-next": "14.2.5"
+    "lint": "eslint"
   },
   "engines": {
-    "node": ">=18.17.0"
+    "node": ">=20.9.0"
+  },
+  "dependencies": {
+    "next": "16.2.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.6",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
